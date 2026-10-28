@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahra Fashion — Dukaanka Dharka Casriga ah iyo Moodada</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ogeysiis Sare / Top Notification Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <span>✨ <strong>Furitaanka Weyn:</strong> Hel 20% Qiimo-dhimis ah dhammaan dalabyada!</span>
+      <span class="top-bar-right">📦 Gaarsiin bilaash ah dhammaan dalabyada ka badan $50 | 📞 +252 61 000 0000</span>
+    </div>
+  </div>
+
+  <!-- Header / Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Logo -->
+      <a href="#home" class="logo">
+        <span class="logo-icon">👑</span>
+        <div class="logo-text">
+          <span class="brand-name">SAHRA</span>
+          <span class="brand-sub">FASHION</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Bogga Hore</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('dumarka')">Dharka Dumarka</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('ragga')">Dharka Ragga</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('carruurta')">Dharka Carruurta</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('diracyada')">Diracyada</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('cabaayadaha')">Cabaayadaha</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('kabaha')">Kabaha</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('boorsooyinka')">Boorsooyinka</a></li>
+          <li><a href="#products" class="nav-link" onclick="setCategoryFilter('agabka')">Agabka</a></li>
+          <li><a href="#contact" class="nav-link">Xiriirka</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Quick Search Trigger -->
+        <a href="#products" class="action-btn search-trigger-btn" title="Raadi Badeeco" onclick="focusSearchInput()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </a>
+
+        <!-- Shopping Cart Icon with Badge -->
+        <button class="action-btn cart-btn" id="openCartBtn" aria-label="Fur Gaadhiga Wax Iibsiga">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Liiska Guud">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-tag">🌟 Ururinta Cusub 2026</span>
+        <h1 class="hero-title">Ku soo dhowow <span class="highlight-pink">Sahra Fashion</span></h1>
+        <p class="hero-subtitle">Dharka quruxda badan, tayada sare leh iyo qiimaha kuu qalma. Xulo labiskaaga maanta oo ku labbiso kalsooni iyo xarrago.</p>
+        
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Hadda Wax Ka Adeegso 🛍️</a>
+          <a href="#categories" class="btn btn-secondary">Qaybaha Dharka 👗</a>
+        </div>
+
+        <div class="hero-features">
+          <div class="hero-feat-item">
+            <span class="feat-icon">💎</span>
+            <div><strong>100% Tayo Sare</strong><span>Dhar asal ah oo la xushay</span></div>
+          </div>
+          <div class="hero-feat-item">
+            <span class="feat-icon">🚀</span>
+            <div><strong>Gaarsiin Degdeg ah</strong><span>Geynta gudaha & dibaddaba</span></div>
+          </div>
+          <div class="hero-feat-item">
+            <span class="feat-icon">🔒</span>
+            <div><strong>Iibsi Aamin ah</strong><span>Kalsoonida macaamiisha</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qaybaha Dharka (Categories Grid) -->
+  <section class="section categories-section" id="categories">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">Moodada Ugu Casrisan</span>
+        <h2 class="main-heading">Qaybaha Dharka ee Sahra Fashion</h2>
+        <div class="heading-divider"></div>
+        <p class="heading-desc">Dooro qaybta aad xiisaynayso si aad u aragto badeecooyinka ugu habboon baahidaada.</p>
+      </div>
+
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- Dynamically rendered or static semantic cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Raadinta iyo Shaandhaynta (Search & Filter Section) -->
+  <section class="filter-bar-section" id="filterSection">
+    <div class="container">
+      <div class="filter-wrapper">
+        
+        <!-- Search Input -->
+        <div class="search-box">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="searchInput" placeholder="Raadi badeeco, dirac, cabaayad, suudh..." autocomplete="off">
+          <button id="clearSearchBtn" class="clear-btn" title="Nadiifi">&times;</button>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+          
+          <!-- Category Select -->
+          <div class="select-group">
+            <label for="categorySelect">Qaybta:</label>
+            <select id="categorySelect">
+              <option value="all">Dhammaan Qaybaha (All)</option>
+              <option value="dumarka">Dharka Dumarka</option>
+              <option value="ragga">Dharka Ragga</option>
+              <option value="carruurta">Dharka Carruurta</option>
+              <option value="diracyada">Diracyada & Dhaqanka</option>
+              <option value="cabaayadaha">Cabaayadaha & Xijaabyada</option>
+              <option value="kabaha">Kabaha</option>
+              <option value="boorsooyinka">Boorsooyinka</option>
+              <option value="agabka">Agabka Moodada</option>
+            </select>
+          </div>
+
+          <!-- Sort Select -->
+          <div class="select-group">
+            <label for="sortSelect">Kala Saar:</label>
+            <select id="sortSelect">
+              <option value="featured">Badeecooyinka La Jecel Yahay</option>
+              <option value="low-to-high">Qiimaha: Ugu Jaban ilaa Ugu Qaalisan</option>
+              <option value="high-to-low">Qiimaha: Ugu Qaalisan ilaa Ugu Jaban</option>
+              <option value="rating">Ugu Qiimeynta Sareysa ⭐</option>
+              <option value="name-az">Magaca (A - Z)</option>
+            </select>
+          </div>
+
+          <!-- Discount Only Checkbox -->
+          <label class="checkbox-label">
+            <input type="checkbox" id="discountOnlyCheckbox">
+            <span>Qiimo-dhimis Keliya 🔥</span>
+          </label>
+
+          <!-- Reset Filter Button -->
+          <button class="btn btn-outline-sm" id="resetFiltersBtn" title="Dib u celi dhammaan shaandhaynta">
+            🔄 Ka saar Shaandhaynta
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Quick category pills -->
+      <div class="category-pills" id="categoryPills">
+        <button class="pill-btn active" data-category="all">Dhammaan</button>
+        <button class="pill-btn" data-category="dumarka">Dharka Dumarka</button>
+        <button class="pill-btn" data-category="diracyada">Diracyada</button>
+        <button class="pill-btn" data-category="cabaayadaha">Cabaayadaha</button>
+        <button class="pill-btn" data-category="ragga">Dharka Ragga</button>
+        <button class="pill-btn" data-category="carruurta">Carruurta</button>
+        <button class="pill-btn" data-category="kabaha">Kabaha</button>
+        <button class="pill-btn" data-category="boorsooyinka">Boorsooyinka</button>
+        <button class="pill-btn" data-category="agabka">Agabka</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Badeecooyinka (Products Catalog Section) -->
+  <section class="section products-section" id="products">
+    <div class="container">
+      
+      <div class="products-header-row">
+        <div>
+          <h2 class="main-heading" id="catalogTitle">Dhammaan Badeecooyinka</h2>
+          <p class="text-muted" id="productsCountText">Waxaa la helay 18 badeeco</p>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <!-- Zero Results Message -->
+      <div class="empty-results-box" id="emptyResults" style="display: none;">
+        <span class="empty-icon">🔍</span>
+        <h3>Badeeco lama helin!</h3>
+        <p>Ma jiro dhar ama agab ku habboon waxa aad raadisay. Fadlan beddel qoraalka ama ka saar shaandhaynta.</p>
+        <button class="btn btn-primary" onclick="resetAllFilters()">Dib u eeg Dhammaan Badeecooyinka</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Banner Gaar ah / Promotion Banner -->
+  <section class="promo-banner-section">
+    <div class="container">
+      <div class="promo-card">
+        <div class="promo-content">
+          <span class="promo-tag">QIIMO-DHIMIS GAAR AH</span>
+          <h2>Diracyada Aroosyada & Xafladaha — Ilaa 30% Off</h2>
+          <p>Xarragada dhaqanka iyo casrinimada ku wada kulmay Sahra Fashion. Samee dalabkaaga maanta oo ka faa'iideyso qiimo-dhimistan xaddidan.</p>
+          <a href="#products" class="btn btn-gold" onclick="setCategoryFilter('diracyada')">Daawo Diracyada Hadda ✨</a>
+        </div>
+        <div class="promo-badge-circle">
+          <span class="percent">30%</span>
+          <span class="text">DHIMIS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faallooyinka Macaamiisha (Testimonials) -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">Kalsoonida Macaamiisha</span>
+        <h2 class="main-heading">Maxay Macaamiishu Ka Yiraahdeen Sahra Fashion?</h2>
+        <div class="heading-divider"></div>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Diraca shiifonka ah ee aan ka dalbaday Sahra Fashion wuxuu ahaa mid aad u tayo sarreeya, midabkiisu aad buu u qurux badnaa waana sidii sawirka ugu muuqatay. Aad baan ugu qancay!"</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">FA</div>
+            <div>
+              <h4 class="reviewer-name">Fartuun Axmed</h4>
+              <span class="reviewer-loc">Muqdisho, Soomaaliya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Suudhka ragga ee slim fit-ka ah iyo kabaha aan ka iibsaday waxay ahaayeen kuwo cabbirkoodu sax yahay oo aad u qurux badan. Gaarsiintuna waxay ahayd mid aad u degdeg badan."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">CA</div>
+            <div>
+              <h4 class="reviewer-name">Cabdiraxmaan Cali</h4>
+              <span class="reviewer-loc">Hargeysa, Soomaaliya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Cabaayadda iyo xijaabka xariirta ah aad baan ula dhacay. Sahra Fashion waa dukaanka koowaad ee aan u doorto dharka ciidaha iyo munaasabadaha qoyskayga."</p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">XM</div>
+            <div>
+              <h4 class="reviewer-name">Xaawo Maxamed</h4>
+              <span class="reviewer-loc">Kismaayo, Soomaaliya</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nala Soo Xiriir (Contact Section) -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="sub-heading">Diyaar baanu kuu nahay</span>
+        <h2 class="main-heading">Nala Soo Xiriir</h2>
+        <div class="heading-divider"></div>
+        <p class="heading-desc">Ma qabtaa su'aal, dalab gaar ah ama talo? Fariin noo soo dir ama toos noogala soo xiriir WhatsApp.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Card -->
+        <div class="contact-info-card">
+          <h3>Xogta Dukaanka Sahra Fashion</h3>
+          <p class="text-muted">Waxaan kugu soo dhoweyneynaa xaruntayada iyo adeegga macaamiisha oo diyaar kuu ah 24/7.</p>
+          
+          <div class="contact-items-list">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Cinwaanka Dukaanka:</strong>
+                <p>Wadada Taleex, Degmada Hodan, Muqdisho, Soomaaliya</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Telefoonka:</strong>
+                <p>+252 61 234 5678 / +252 62 987 6543</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Iimaylka:</strong>
+                <p>info@sahrafashion.so</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon">🕒</span>
+              <div>
+                <strong>Saacadaha Shaqada:</strong>
+                <p>Sabti - Khamiis: 8:00 Subaxnimo - 9:00 Habeennimo</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct WhatsApp Button -->
+          <div class="whatsapp-box">
+            <a href="https://wa.me/252612345678?text=Asc%20Sahra%20Fashion,%20waxaan%20doonayaa%20in%20aan%20wax%20idin%20weydiiyo" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.08l-.29-.17-3.12.82.83-3.04-.19-.3a8.21 8.21 0 0 1-1.26-4.46c0-4.54 3.7-8.24 8.24-8.24z"/></svg>
+              Toos Noogala Hadal WhatsApp
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links-row">
+            <span>Baraha Bulshada:</span>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">📸 Instagram</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">📘 Facebook</a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">🎵 TikTok</a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h3>Fariin Noo Soo Dir</h3>
+          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label for="contactName">Magacaaga Buuxa *</label>
+              <input type="text" id="contactName" required placeholder="Gali magacaaga...">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactEmail">Iimaylkaaga</label>
+                <input type="email" id="contactEmail" placeholder="tusaale@email.com">
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Lambarka Telefoonka *</label>
+                <input type="tel" id="contactPhone" required placeholder="061XXXXXXX">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Ujeeddada Fariinta</label>
+              <input type="text" id="contactSubject" placeholder="Su'aal ku saabsan dhar, dalab...">
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Fariintaada *</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Qor fariintaada oo faahfaahsan..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Soo Dir Fariinta ✉️</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="logo-footer">
+          <span class="logo-icon">👑</span>
+          <div>
+            <span class="brand-name">SAHRA</span>
+            <span class="brand-sub">FASHION</span>
+          </div>
+        </div>
+        <p>Dukaanka rasmiga ah ee dharka casriga ah, diracyada dhaqanka, cabaayadaha, suudhadhka iyo agabka moodada ugu tayada sarreeya.</p>
+        <p class="footer-badge">✨ Tayo, Xarrago iyo Kalsooni.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Qaybaha Dharka</h4>
+        <ul class="footer-links">
+          <li><a href="#products" onclick="setCategoryFilter('dumarka')">Dharka Dumarka</a></li>
+          <li><a href="#products" onclick="setCategoryFilter('diracyada')">Diracyada Soomaalida</a></li>
+          <li><a href="#products" onclick="setCategoryFilter('cabaayadaha')">Cabaayadaha & Xijaabyada</a></li>
+          <li><a href="#products" onclick="setCategoryFilter('ragga')">Dharka Ragga & Suudhadhka</a></li>
+          <li><a href="#products" onclick="setCategoryFilter('carruurta')">Dharka Carruurta</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Xiriir & Xog</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Bogga Hore</a></li>
+          <li><a href="#filterSection">Badeecooyinka Cusub</a></li>
+          <li><a href="#contact">Nala Soo Xiriir</a></li>
+          <li><a href="#testimonials">Faallooyinka Macaamiisha</a></li>
+          <li><a href="javascript:void(0)" onclick="openCart()">Gaadhiga Wax Iibsiga</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-title">Warbixinta Dhimista</h4>
+        <p>Ku biir liiska macaamiisheena si aad u hesho warbixinada dharka cusub iyo qiimo-dhimisyada gaarka ah.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="Gali iimaylkaaga..." required>
+          <button type="submit" class="btn btn-primary">Ku biir</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; 2026 Sahra Fashion. Dhammaan Xuquuqdu Way Dhawran Tahay.</p>
+        <p class="designer-text">Naqshadda Dukaanka: HTML, CSS & JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS & DRAWERS ==================== -->
+
+  <!-- 1. Cart Drawer (Slide-out) -->
+  <div class="cart-drawer-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Gaadhiga Wax Iibsiga">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <span class="cart-icon">🛍️</span>
+        <h3>Gaadhigaaga Wax Iibsiga</h3>
+        <span class="cart-count-pill" id="cartDrawerCount">(0)</span>
+      </div>
+      <button class="close-drawer-btn" id="closeCartBtn" aria-label="Xir">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="shipping-progress-box">
+      <div class="shipping-text" id="shippingText">Gaarsiin bilaash ah hel marka aad gaarto $50!</div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="shippingProgressFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List Container -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Cart Footer & Summary -->
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-summary-row">
+        <span>Isu-geynta Badeecooyinka:</span>
+        <span id="cartSubtotal">$0.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Gaarsiinta:</span>
+        <span class="text-success" id="cartShippingCost">Bilaash ($0.00)</span>
+      </div>
+      <div class="cart-summary-row total-row">
+        <span>Wadarta Qiimaha:</span>
+        <span class="total-amount" id="cartTotalAmount">$0.00</span>
+      </div>
+
+      <div class="cart-action-buttons">
+        <button class="btn btn-primary btn-block" id="proceedToCheckoutBtn" onclick="openCheckoutModal()">
+          U Gudub Diyaarinta Dalabka 💳
+        </button>
+        <button class="btn btn-outline-sm btn-block" onclick="clearFullCart()">
+          Nadiifi Gaadhiga
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 2. Product Details Modal (Faahfaahin Dheeraad ah) -->
+  <div class="modal-backdrop" id="productModalBackdrop">
+    <div class="product-modal" id="productModal">
+      <button class="close-modal-btn" onclick="closeProductModal()">&times;</button>
+      
+      <div class="product-modal-grid">
+        <!-- Image Area -->
+        <div class="modal-image-col">
+          <img id="modalProductImg" src="" alt="Badeeco">
+          <span class="modal-badge" id="modalProductBadge">Cusub</span>
+        </div>
+
+        <!-- Details Area -->
+        <div class="modal-details-col">
+          <span class="modal-category" id="modalProductCategory">Qaybta</span>
+          <h2 class="modal-title" id="modalProductTitle">Magaca Badeecada</h2>
+          
+          <div class="modal-rating-row">
+            <div class="stars" id="modalProductStars">★★★★★</div>
+            <span class="rating-number" id="modalProductRating">4.9</span>
+            <span class="review-count" id="modalProductReviews">(38 faallooyin)</span>
+          </div>
+
+          <div class="modal-price-row">
+            <span class="modal-current-price" id="modalProductPrice">$0.00</span>
+            <span class="modal-old-price" id="modalProductOldPrice">$0.00</span>
+            <span class="modal-discount-tag" id="modalProductDiscountTag">20% Dhimis</span>
+          </div>
+
+          <p class="modal-description" id="modalProductDesc">
+            Sharaxaadda badeecada...
+          </p>
+
+          <!-- Size Selector -->
+          <div class="option-selection">
+            <label>Cabbirka (Size): <strong id="selectedSizeText">M</strong></label>
+            <div class="size-buttons-group" id="modalSizeButtons">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Color Selector -->
+          <div class="option-selection">
+            <label>Midabka: <strong id="selectedColorText">Asalka</strong></label>
+            <div class="color-swatches-group" id="modalColorSwatches">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Quantity and Add Button -->
+          <div class="modal-actions-row">
+            <div class="quantity-controller">
+              <button type="button" onclick="adjustModalQty(-1)">-</button>
+              <span id="modalQuantityVal">1</span>
+              <button type="button" onclick="adjustModalQty(1)">+</button>
+            </div>
+
+            <button class="btn btn-primary flex-grow" id="modalAddToCartBtn" onclick="addModalProductToCart()">
+              Ku dar Gaadhiga 🛍️
+            </button>
+          </div>
+
+          <div class="modal-trust-box">
+            <span>✅ Dammaanad tayo sare leh</span>
+            <span>🔄 7 Maalmood oo beddelaad ah</span>
+            <span>🚚 Gaarsiin hufan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Checkout Modal (Foomka Dalabka) -->
+  <div class="modal-backdrop" id="checkoutModalBackdrop">
+    <div class="checkout-modal">
+      <button class="close-modal-btn" onclick="closeCheckoutModal()">&times;</button>
+      
+      <div class="checkout-header">
+        <span class="checkout-icon">📝</span>
+        <div>
+          <h2>Foomka Diyaarinta Dalabka</h2>
+          <p class="text-muted">Fadlan buuxi xogtaada si dalabka tijaabada ah lagugu diyaariyo.</p>
+        </div>
+      </div>
+
+      <div class="checkout-grid">
+        
+        <!-- Form Section -->
+        <div class="checkout-form-col">
+          <form id="checkoutForm" onsubmit="handleOrderSubmit(event)">
+            <h4 class="form-section-title">1. Xogta Macmiilka & Meesha Lagu Geynayo</h4>
+
+            <div class="form-group">
+              <label for="orderFullName">Magacaaga Buuxa *</label>
+              <input type="text" id="orderFullName" required placeholder="Gali magacaaga oo saddexan...">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="orderPhone">Lambarka Telefoonka (EVC / Zaad / Sahal) *</label>
+                <input type="tel" id="orderPhone" required placeholder="061XXXXXXX ama 063XXXXXXX">
+              </div>
+              <div class="form-group">
+                <label for="orderCity">Magaalada *</label>
+                <select id="orderCity" required>
+                  <option value="Muqdisho">Muqdisho</option>
+                  <option value="Hargeysa">Hargeysa</option>
+                  <option value="Kismaayo">Kismaayo</option>
+                  <option value="Garoowe">Garoowe</option>
+                  <option value="Boosaaso">Boosaaso</option>
+                  <option value="Baydhabo">Baydhabo</option>
+                  <option value="Borama">Borama</option>
+                  <option value="Jigjiga">Jigjiga</option>
+                  <option value="Nairobi">Nairobi</option>
+                  <option value="Magaalo Kale">Magaalo Kale</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="orderAddress">Cinwaanka Degmada & Xaafadda *</label>
+              <input type="text" id="orderAddress" required placeholder="Tusaale: Hodan, Taleex, Guriga No. 12...">
+            </div>
+
+            <h4 class="form-section-title">2. Habka Lacag Bixinta</h4>
+            <div class="payment-methods-group">
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Kaash marka laguugu keeno (Cash on Delivery)" checked>
+                <span>💵 Kaash marka laguugu keeno (Cash on Delivery)</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Telefoonka Gacanta (EVC Plus / Zaad / Sahal)">
+                <span>📱 Telefoonka Gacanta (EVC Plus / Zaad / Sahal)</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="paymentMethod" value="Kaadhka Bangiga / Master Card">
+                <span>💳 Kaadhka Bangiga (Visa / MasterCard)</span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="orderNotes">Faahfaahin Dheeraad ah (Haddii ay jirto)</label>
+              <textarea id="orderNotes" rows="2" placeholder="Tusaale: Waxaan doonayaa in la ii keeno galabnimada..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submitOrderBtn">
+              Xaqiiji Dalabka Hadda ✅
+            </button>
+          </form>
+        </div>
+
+        <!-- Order Summary Side -->
+        <div class="checkout-summary-col">
+          <div class="order-summary-box">
+            <h4>Badeecooyinka La Doortay</h4>
+            
+            <div class="summary-items-scroll" id="checkoutItemsList">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <div class="summary-totals">
+              <div class="sum-row">
+                <span>Tirada Badeecooyinka:</span>
+                <strong id="summaryTotalItems">0 xabbo</strong>
+              </div>
+              <div class="sum-row">
+                <span>Qiimaha Badeecooyinka:</span>
+                <span id="summarySubtotal">$0.00</span>
+              </div>
+              <div class="sum-row">
+                <span>Qiimaha Gaarsiinta:</span>
+                <span class="text-success" id="summaryDelivery">Bilaash ($0.00)</span>
+              </div>
+              <div class="sum-row grand-total-row">
+                <span>Wadarta Guud:</span>
+                <span class="grand-price" id="summaryGrandTotal">$0.00</span>
+              </div>
+            </div>
+
+            <div class="summary-info-banner">
+              ⚠️ <strong>Ogeysiis Tusaale ah:</strong> Website-kani ma laha backend ama server. Dalabkani waa mid tusaale ah oo tijaabo ah.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Order Confirmation Modal (Xaqiijinta Dalabka) -->
+  <div class="modal-backdrop" id="confirmationModalBackdrop">
+    <div class="confirmation-modal">
+      <div class="conf-icon-wrapper">🎉</div>
+      <h2 class="conf-title">Dalabkaaga Waa La Xaqiijiyay!</h2>
+      <p class="conf-subtitle">Waad ku mahadsan tahay wax ka adeegsiga <strong>Sahra Fashion</strong>.</p>
+      
+      <div class="simulation-alert">
+        <span class="alert-icon">ℹ️</span>
+        <p><strong>Xusuusin Muhiim ah:</strong> Maadaama website-ku uusan lahayn backend, kani waa <strong>dalab tusaale ah (demo)</strong> oo si guul leh loo diyaariyay. Xogta looma dirin server ama dukaan dhab ah.</p>
+      </div>
+
+      <div class="order-receipt-card" id="orderReceipt">
+        <div class="receipt-header">
+          <span>Lambarka Dalabka: <strong id="receiptOrderId">#SF-2026-0000</strong></span>
+          <span id="receiptDate">28/10/2026</span>
+        </div>
+        <div class="receipt-body">
+          <p><strong>Macmiilka:</strong> <span id="receiptCustomerName">-</span></p>
+          <p><strong>Telefoonka:</strong> <span id="receiptCustomerPhone">-</span></p>
+          <p><strong>Cinwaanka:</strong> <span id="receiptCustomerAddress">-</span></p>
+          <p><strong>Habka Lacag-bixinta:</strong> <span id="receiptPaymentMethod">-</span></p>
+          <p><strong>Wadarta Guud:</strong> <span class="receipt-total" id="receiptTotalAmount">$0.00</span></p>
+        </div>
+      </div>
+
+      <div class="conf-actions">
+        <button class="btn btn-whatsapp" onclick="shareOrderWhatsApp()">
+          La Wadaag Dalabka WhatsApp 💬
+        </button>
+        <button class="btn btn-primary" onclick="closeConfirmationAndReset()">
+          Ku Noqo Dukaanka 🛍️
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript Script -->
+  <script src="script.js"></script>
+</body>
+</html>
